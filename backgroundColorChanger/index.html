@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body{
+            padding: 2.5vw;
+            text-align: center;
+            background-color: white;
+        }
+        #color-btn{
+            text-align: end;
+        }
+        h1{
+            text-align: center;
+        }
+        .btn{
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor:pointer;
+        }
+        #color-1{
+           background-color: white; 
+        }
+        #color-2{
+            background-color: aqua;
+        }
+        #color-3{
+            background-color: brown;
+        }
+        #color-4{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="color-btn">
+        <button class="btn" id="color-1" onclick="changeBG('#ffffff')"></button>
+        <button class="btn" id="color-2" onclick="changeBG('#7fffd4')"></button>
+        <button class="btn" id="color-3"></button>
+        <button class="btn" id="color-4"></button>
+    </div>
+        <h1 class="txt">Dummy Text</h1>
+        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aperiam dignissimos dolorum illo aliquid, hic, sit magnam corporis maxime deserunt temporibus amet ab quidem vel, consectetur esse. Magnam, cupiditate ullam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, itaque? Aut, dolorem. Numquam sapiente tempora, ad sint expedita cumque est facilis, dolores quam architecto illo. Reprehenderit, ipsum magni. Fuga perspiciatis necessitatibus, dolorum recusandae </p>
+        
+        <img src="scene.jpg" alt="scene" width="100%">
+
+        <p class="txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam aperiam dignissimos dolorum illo aliquid, hic, sit magnam corporis maxime deserunt temporibus amet ab quidem vel, consectetur esse. Magnam, cupiditate ullam! Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, itaque? Aut, dolorem. Numquam sapiente tempora, ad sint expedita cumque est facilis, dolores quam architecto illo. Reprehenderit, ipsum magni. Fuga perspiciatis necessitatibus, dolorum recusandae voluptatum odio nihil, debitis autem soluta fugiat beatae voluptatibus illum voluptates ea assumenda officiis tempora illo quasi ut sint rerum! Tenetur dignissimos cupiditate earum, sed voluptatum ut perspiciatis, dolorum aliquam minus harum ullam! Deserunt at minima libero vero, porro dolores, minus, enim nostrum aperiam iste repellat nihil? Exercitationem hic placeat, laudantium asperiores veniam tempora harum! Expedita consectetur facere assumenda nemo, optio delectus ducimus! Itaque adipisci quisquam dolore, in, vero culpa cum corporis esse iure perferendis quis. Enim reiciendis voluptatum obcaecati explicabo tempora consequuntur distinctio, numquam hic provident? Eaque, perferendis veritatis error reprehenderit ratione nostrum minus, repudiandae magnam animi praesentium reiciendis repellendus a neque vero pariatur qui ipsam aut, nesciunt porro! Cumque, sed 
+        </p>
+
+    <script>
+        
+        let text = document.getElementsByClassName("txt");
+        function changeBG(color){
+            document.body.style.backgroundColor = color;
+            for (let ele of text){
+                ele.style.color = "black";            
+            }
+        };
+
+        let btn3 = document.getElementById("color-3");
+        let btn4 = document.getElementById("color-4");
+   
+        btn3.addEventListener('click',function(){
+            document.body.style.backgroundColor = "brown";
+            for (let ele of text){
+                ele.style.color = "black";            
+            }
+        });
+        btn4.addEventListener('click',function(){
+            document.body.style.backgroundColor = "black";
+            for (let ele of text){
+                ele.style.color = "white";            
+            }
+        });
+    </script>
+</body>
+</html>
