@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="slide-container">
+        <div class="slide">
+            <img src="img/1.jpg" alt="1">
+            <div class="caption">Caption 1</div>
+        </div>
+
+        <div class="slide">
+            <img src="img/2.jpg" alt="2">
+            <div class="caption">Caption 2</div>
+        </div>
+
+        <div class="slide">
+            <img src="img/3.jpg" alt="3">
+            <div class="caption">Caption 3</div>
+        </div>
+        
+        <div class="slide">
+            <img src="img/4.jpg" alt="4">
+            <div class="caption">Caption 4</div>
+        </div>
+
+        <span class="arrow back" onclick="control(-1)">&#10094;</span>
+        <span class="arrow next" onclick="control(1)">&#10095;</span>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
